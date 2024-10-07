@@ -1,5 +1,6 @@
-package org.example.service;
+package org.example.service.security;
 
+import jakarta.transaction.Transactional;
 import org.example.UserDetailsImpl;
 import org.example.model.User;
 import org.example.repo.UserRepository;
@@ -9,14 +10,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     UserRepository userRepository;
 
+
+    @Transactional
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username)

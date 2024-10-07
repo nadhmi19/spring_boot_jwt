@@ -18,7 +18,7 @@ public class Role extends EntityBase {
     @Column(length = 20)
     private ERole name;
 
-    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.MERGE)
     @JoinTable(name = "users_in_roles",
             joinColumns = { @JoinColumn(name = "role_id", referencedColumnName = "id") },
             inverseJoinColumns = { @JoinColumn(name = "user_id", referencedColumnName = "id") } )
