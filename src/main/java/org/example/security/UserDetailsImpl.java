@@ -1,4 +1,4 @@
-package org.example;
+package org.example.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.example.model.Role;

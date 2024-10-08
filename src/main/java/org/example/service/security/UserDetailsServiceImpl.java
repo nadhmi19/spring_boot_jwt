@@ -1,7 +1,7 @@
 package org.example.service.security;
 
 import jakarta.transaction.Transactional;
-import org.example.UserDetailsImpl;
+import org.example.security.UserDetailsImpl;
 import org.example.model.User;
 import org.example.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     UserRepository userRepository;
 
 
-    @Transactional
+    //@Transactional
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username)

@@ -1,6 +1,6 @@
 package org.example.service.impl;
 
-import org.example.model.ERole;
+import org.example.utils.enums.ERole;
 import org.example.model.User;
 import org.example.repo.UserRepository;
 import org.example.service.IUserService;

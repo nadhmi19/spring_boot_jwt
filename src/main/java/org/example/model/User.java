@@ -20,8 +20,9 @@ uniqueConstraints = {
 @Getter
 @Setter
 @AllArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 1)
 public class User extends EntityBase{
-
 
     @NotBlank
     @Size(max = 20)

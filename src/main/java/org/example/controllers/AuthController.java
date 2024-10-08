@@ -1,12 +1,12 @@
 package org.example.controllers;
 
 import jakarta.validation.Valid;
-import org.example.UserDetailsImpl;
+import org.example.security.UserDetailsImpl;
 import org.example.dto.LoginRequestDto;
 import org.example.dto.MessageResponse;
 import org.example.dto.SignUpRequest;
 import org.example.dto.UserInfoResponse;
-import org.example.model.ERole;
+import org.example.utils.enums.ERole;
 import org.example.model.Role;
 import org.example.model.User;
 import org.example.repo.RoleRepository;
@@ -21,11 +21,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

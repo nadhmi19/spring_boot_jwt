@@ -1,6 +1,6 @@
 package org.example.repo;
 
- import org.example.model.ERole;
+ import org.example.utils.enums.ERole;
 import org.example.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User,Long> {
-     Optional<User> findByUsername(String username);
+public interface UserRepository extends BaseRepository<User> {
+    Optional<User> findByUsername(String username);
 
     Boolean existsByUsername(String username);
 

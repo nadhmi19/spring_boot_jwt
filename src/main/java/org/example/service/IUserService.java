@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.model.ERole;
+import org.example.utils.enums.ERole;
 import org.example.model.User;
 
 import java.util.List;
