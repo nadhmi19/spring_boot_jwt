@@ -1,12 +1,16 @@
 package org.example.service;
 
 import org.example.repo.BaseRepository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 public abstract class CrudBaseService<T> implements IBaseService<T> {
     public abstract BaseRepository<T> getRepository();
+
+
 
     public T save(T t) {
         return getRepository().save(t);
