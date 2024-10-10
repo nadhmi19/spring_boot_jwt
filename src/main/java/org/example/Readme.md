@@ -20,3 +20,26 @@ In Spring Boot, the default transaction manager used with Spring Data JPA is the
 This transaction manager is designed to work with JPA (Java Persistence API) 
 and is typically configured automatically 
 when you include the necessary dependencies for JPA (like Hibernate) in your project.
+
+
+
+
+//application transaction 
+sequence of application actions that are considered as a single logical unit 
+joinOrganization method == complete transaction 
+2 actions : 
+persist employee information 
+persist health insurance information 
+
+
+**********organization service *******************
+
+leaveOrganization(Employee,employeeHealthInsurance)
+
+**************************************************
+---> employeeService.deleteEmployeeById(id)
+---> healthInsuranceService.deleteEmployeeHealthInsuranceBy(id)
+---> delete Employee Health insurance by Id
+
+
+Begin transaction : application transaction ==> app commit or rollback
