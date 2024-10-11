@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails;
 
 //employee wil join an organization
 @Entity
-@Table(name="employees")
+@Table(name="employee")
 @SequenceGenerator(name = "employee_seq",initialValue = 1, sequenceName = "student_seq", allocationSize = 1)
 @Getter
 @Setter
@@ -18,7 +18,7 @@ public class Employee extends User {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String employeeNumber;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private EmployeeHealthInsurance insurance;
 
 }

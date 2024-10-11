@@ -4,7 +4,7 @@ import org.example.model.employees.Employee;
 
 public interface IEmployeeService {
 
-    void insertEmployee(Employee emp);
+    Employee insertEmployee(Employee emp);
 
     void deleteEmployeeById(String empid);
 }

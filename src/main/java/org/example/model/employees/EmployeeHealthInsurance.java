@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.example.model.EntityBase;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,6 +21,8 @@ public class EmployeeHealthInsurance extends EntityBase {
     private String healthInsuranceName;
     private BigDecimal healthInsuranceAmount;
 
-    @OneToMany(mappedBy = "healthInsurance")
-    private List<Employee> employeesList;
+    @OneToMany(mappedBy = "insurance")
+    private List<Employee> employeesList = new ArrayList<>();
+
+
 }

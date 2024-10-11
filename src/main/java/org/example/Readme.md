@@ -43,3 +43,11 @@ leaveOrganization(Employee,employeeHealthInsurance)
 
 
 Begin transaction : application transaction ==> app commit or rollback
+
+
+########### Unidirectional ###########
+
+in this type of association == only the source entity has a relationship field that refers to the target 
+
+########### Bidirectional ###########
+each entity has a relationship field that refers to each other 
