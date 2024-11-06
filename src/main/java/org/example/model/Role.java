@@ -4,7 +4,6 @@ package org.example.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,6 +11,8 @@ import java.util.Set;
 @Table(name="roles")
 @Getter
 @Setter
+@SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 1)
+
 public class Role extends EntityBase {
 
     @Enumerated(EnumType.STRING)
